@@ -13,6 +13,8 @@ metadata:
 
 # agent-cron-service — scheduled jobs that fire without you
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 A prompt-only skill runs **only during a conversation turn**. It cannot hold a job
 that fires tomorrow at 3am, keep state between runs, or bill each fire — the turn
 ends and it is gone. Anything scheduled, stateful, and recurring needs a backend

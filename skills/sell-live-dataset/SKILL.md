@@ -13,6 +13,8 @@ metadata:
 
 # sell-live-dataset — the agent as a revenue center
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 A prompt-only skill can *produce* a dataset, but it can't **sell** one: it can't
 hold a live endpoint, meter calls, or collect payment. So the scrape you built
 this morning is a cost — tokens spent, nothing recovered. SettleMesh flips it:

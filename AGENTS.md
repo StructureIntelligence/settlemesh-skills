@@ -17,12 +17,17 @@ There is one physical copy of each skill (`skills/`); every runtime reads that c
 
 ## Using these skills
 
-All skills share one setup. Install the CLI and authenticate once:
+All skills share one setup, and **an agent should self-drive it — never dead-stop on
+an auth error and hand the task back to the human.** Run
+[`scripts/ensure-session.sh`](./scripts/ensure-session.sh) (or its inline equivalent):
+check `settlemesh whoami`; if it fails and `SETTLE_API_KEY` is unset, run
+`settlemesh login`, which opens the browser for a **one-time** human approval, polls
+until approved, and caches the session. The single browser click is the only human step.
 
 ```bash
 npm install -g settlemesh@latest
-settlemesh login            # device-code: a human approves once in the browser
-# or, headless/CI:  export SETTLE_API_KEY=sk-settle-...
+bash scripts/ensure-session.sh   # whoami -> login (one-time browser approval) -> cached
+# headless/CI:  export SETTLE_API_KEY=sk-settle-...
 ```
 
 Then a skill's `metadata.openclaw.requires` gates it on the `settlemesh` binary +

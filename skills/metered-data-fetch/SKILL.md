@@ -13,6 +13,8 @@ metadata:
 
 # metered-data-fetch — paid data APIs, one key, quote before every call
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 Every "give your agent web search / scraping / SEO data" skill ends the same way:
 *"get an API key from each data vendor and paste it here."* Now you own an
 account per vendor, a key in an env file, and a bill you can't see until the invoice lands.

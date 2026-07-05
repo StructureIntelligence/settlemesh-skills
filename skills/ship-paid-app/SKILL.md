@@ -13,6 +13,8 @@ metadata:
 
 # ship-paid-app — deploy a live app in one command
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 Every "build an app" skill stops at handing you a folder: you still have to make
 a GitHub repo, a Vercel/Netlify account, a Supabase project, Stripe keys, and a
 domain before anyone can use it. **SettleMesh collapses that into one command.**

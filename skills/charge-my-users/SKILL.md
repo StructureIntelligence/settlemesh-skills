@@ -13,6 +13,8 @@ metadata:
 
 # charge-my-users — make end users pay per use
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 Most "build an AI app" skills leave you holding the bill: every LLM call, image,
 or search the app makes is charged to *you*, the developer. There is no account
 model, no meter, and no payment rail to push that cost onto the person who

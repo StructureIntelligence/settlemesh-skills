@@ -12,6 +12,8 @@ metadata:
 
 # rent-a-logged-in-agent — lend a logged-in coding agent for pay
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 You are logged into `claude-code` or `codex` on this machine. That login is worth
 money to someone who isn't. **SettleMesh lets you rent it out** — an authorized
 caller sends a prompt, your local agent runs it, and they pay you per minute.

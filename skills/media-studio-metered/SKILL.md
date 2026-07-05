@@ -13,6 +13,8 @@ metadata:
 
 # media-studio-metered — generate media you can resell, no provider key
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 Most media-generation skills are thin pass-throughs: each wraps **the user's own
 provider key** and bundles no billing, so it can't meter usage and can't charge
 anyone. This skill is different —

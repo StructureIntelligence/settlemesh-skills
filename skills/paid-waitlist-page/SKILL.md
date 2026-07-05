@@ -13,6 +13,8 @@ metadata:
 
 # paid-waitlist-page — a signup page that persists and can charge
 
+> **Session (auto — never dead-stop on auth):** before your first `settlemesh` call, run `settlemesh whoami`; if it errors and `SETTLE_API_KEY` is unset, run `settlemesh login` yourself — it opens the browser for a **one-time** human approval, polls until approved, and caches the session. Do NOT stop to ask the user to "log in manually" — drive it. Keep an explicit human confirmation only for spending / credential-lending actions (fail-closed).
+
 Every "landing page generator" hands you an `index.html` and stops — leaving you
 the three hard parts: **persist** the signups somewhere, **host** the page on a
 real URL, and **charge** for pre-orders. A prompt-only skill can't run a database,
