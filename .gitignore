@@ -1,0 +1,10 @@
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# build artifacts (skills are plain text; nothing to build)
+node_modules/
+*.zip

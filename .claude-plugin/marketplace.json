@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "settlemesh-skills",
+  "owner": { "name": "StructureIntelligence", "email": "team@settlemesh.io" },
+  "description": "Deploy + monetize skills wrapping the SettleMesh CLI and MCP server — ship a live app, charge end users, call metered paid APIs, publish a paid API, schedule jobs, and rent out a logged-in agent.",
+  "metadata": { "pluginRoot": "./" },
+  "plugins": [
+    {
+      "name": "ship-paid-app",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/ship-paid-app"],
+      "description": "Deploy a full-stack app to a live *.run.settlemesh.io URL in one command — login, managed DB, and billing wired automatically."
+    },
+    {
+      "name": "charge-my-users",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/charge-my-users"],
+      "description": "Turn a deployed app into a product that bills its own end users per use (end-user-pays via X-Settle-Payer), with your markup."
+    },
+    {
+      "name": "metered-data-fetch",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/metered-data-fetch"],
+      "description": "Call paid web search / scrape / SEO / finance data per-call with a cost quote up front and no BYOK — first call to each capability is free."
+    },
+    {
+      "name": "paid-waitlist-page",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/paid-waitlist-page"],
+      "description": "Spin up a hosted waitlist / landing / pre-order page that persists signups to a managed database and can take a payment."
+    },
+    {
+      "name": "media-studio-metered",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/media-studio-metered"],
+      "description": "Generate images / video / audio through a metered pipeline you can resell per render — no BYOK, first call free."
+    },
+    {
+      "name": "sell-live-dataset",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/sell-live-dataset"],
+      "description": "Turn a scrape, dataset, or any endpoint into a priced API that other agents and people pay per call."
+    },
+    {
+      "name": "agent-cron-service",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/agent-cron-service"],
+      "description": "Run a hosted agent on a cron schedule with exactly-once idempotent billing and per-day spend caps."
+    },
+    {
+      "name": "rent-a-logged-in-agent",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/rent-a-logged-in-agent"],
+      "description": "Lend a logged-in claude-code / codex agent into a fail-closed sandbox for pay, gated to an allowlist or your friend graph."
+    }
+  ]
+}
