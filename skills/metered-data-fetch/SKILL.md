@@ -1,6 +1,6 @@
 ---
 name: metered-data-fetch
-description: Call real PAID data APIs — paid web search / scrape / SEO / SERP / finance data for agents, no API key, no BYOK, metered per-call, cost quote up front, first call free. Use when the agent needs live web search, page scraping, SEO/SERP rankings, stock/market data, or an LLM, but you do NOT want to sign up for Felo/Tavily/Apollo/DataForSEO, hold their keys, and eat an opaque monthly bill — one SettleMesh key replaces all of them, each call quoted and metered in Aev.
+description: Call real PAID data APIs — paid web search / scrape / SEO / SERP / finance data for agents, no API key, no BYOK, metered per-call, cost quote up front, first call free. Use when the agent needs live web search, page scraping, SEO/SERP rankings, stock/market data, or an LLM, but you do NOT want to sign up for a separate data-API vendor, hold its key, and eat an opaque monthly bill — one SettleMesh key covers them all, each call quoted and metered in Aev.
 license: MIT
 compatibility: "Requires the settlemesh CLI (npm i -g settlemesh) and a SETTLE_API_KEY; makes authenticated, metered calls to the SettleMesh platform over the network."
 metadata:
@@ -14,8 +14,8 @@ metadata:
 # metered-data-fetch — paid data APIs, one key, quote before every call
 
 Every "give your agent web search / scraping / SEO data" skill ends the same way:
-*"get a Tavily / Felo / Apollo / DataForSEO key and paste it here."* Now you own an
-account, a key in an env file, and a bill you can't see until the invoice lands.
+*"get an API key from each data vendor and paste it here."* Now you own an
+account per vendor, a key in an env file, and a bill you can't see until the invoice lands.
 **SettleMesh replaces all of them with one key and a quote before every call.** You
 search a single catalog, read the exact Aev a call will cost, then run it — metered
 per-call, no provider signup, no BYOK.
@@ -72,7 +72,7 @@ and **LLMs** (`llm.chat`). One key, one unit, one catalog.
   path); the CLI prints the charge. A failed call never charges you — retries are safe.
 - Everything is billed in **Aev** (1 USD = 100 Aev). Check balance with
   `settlemesh aev balance`; itemized charges are in `settlemesh aev ledger --limit 5`.
-- **Honest caveat:** this is the ONE area where pure LLM-gateway competitors also
-  compete. The edge is quote-up-front + first-call-free + being able to **stack these
-  paid calls directly onto a deployed, end-user-paying app** — see `charge-my-users`
-  to make your users' wallets pay for the data your app fetches, with your markup.
+- **The edge:** a quote before every call, first-call-free per capability, and being
+  able to **stack these paid calls directly onto a deployed, end-user-paying app** —
+  see `charge-my-users` to make your users' wallets pay for the data your app fetches,
+  with your markup.

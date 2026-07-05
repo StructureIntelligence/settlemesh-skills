@@ -13,9 +13,9 @@ metadata:
 
 # media-studio-metered — generate media you can resell, no provider key
 
-The most-installed media skills on ClawHub (Nano Banana, PixVerse, ElevenLabs)
-are thin pass-throughs: each wraps **the user's own provider key** and bundles no
-billing, so it can't meter usage and can't charge anyone. This skill is different —
+Most media-generation skills are thin pass-throughs: each wraps **the user's own
+provider key** and bundles no billing, so it can't meter usage and can't charge
+anyone. This skill is different —
 generation runs through **SettleMesh's metered pipeline**: no BYOK, the **first call
 to each official capability is free**, and you can **resell each render** to your
 app's end users with markup. A prompt-only skill can only forward a key it doesn't

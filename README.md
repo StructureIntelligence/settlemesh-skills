@@ -12,11 +12,11 @@ anything.
 
 ## The skills
 
-| Skill | What it does | Moat (AIsa can't) |
+| Skill | What it does | Needs a live backend |
 |---|---|---|
 | [`ship-paid-app`](./skills/ship-paid-app) | One command → a live app with login + managed DB + billing, at `*.run.settlemesh.io` | ✅ deploy |
 | [`charge-my-users`](./skills/charge-my-users) | Turn a deployed app into a product that bills **its own end users** (`X-Settle-Payer`) | ✅ end-user-pays |
-| [`metered-data-fetch`](./skills/metered-data-fetch) | Paid web search / scrape / SEO / finance data, no BYOK, quote up front, first call free | ⚠️ contested |
+| [`metered-data-fetch`](./skills/metered-data-fetch) | Paid web search / scrape / SEO / finance data, no BYOK, quote up front, first call free | ✅ metered, no BYOK |
 | [`paid-waitlist-page`](./skills/paid-waitlist-page) | A hosted landing/waitlist/pre-order page that persists signups and can take payment | ✅ deploy+DB+pay |
 | [`media-studio-metered`](./skills/media-studio-metered) | Metered image/video/audio generation you can resell per render | ✅ metered+resell |
 | [`sell-live-dataset`](./skills/sell-live-dataset) | Publish a scrape/dataset as a priced API others pay to call | ✅ publish+bill |
